@@ -1,0 +1,29 @@
+<h6 class="breadcrumb">Listing lots</h6>
+
+    	<% @lots.each do |lot| %>
+	<div class="lot-item">
+			
+			<%= link_to (image_tag lot.image(:thumb), :class => "thumbnail"), lot %>
+			
+		
+			<p class="list-name">	<%= link_to(lot) do %>
+                                <%= lot.name %>
+                        	<% end %>
+			</p>
+
+			<p class="list-description">
+				<%= lot.description %>
+			</p>
+<div class="clearleft">
+        <!--s-->
+</div>
+		
+	</div>
+<div class="clearleft">
+	<!--s-->
+</div>
+	<% end %>
+
+
+<br>
+

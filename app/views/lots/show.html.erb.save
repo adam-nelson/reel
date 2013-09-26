@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="image">
+<%= image_tag @lot.image.url %>
+
+ <h1> <%= @lot.name %><small> - <%= @lot.address %></small></h1>
+</div>
+<div class="hero-unit">
+<small>
+  <%= @lot.description %></small>
+</div>
+
+<%= link_to 'Edit', edit_lot_path(@lot) %> |
+<%= link_to 'Back', lots_path %>

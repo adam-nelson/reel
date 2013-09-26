@@ -1,0 +1,61 @@
+@import "bootstrap";
+@import 'bootstrap-responsive';
+
+$navbarBackgroundHighlight: white;
+$navbarBackground: whie;
+$btnPrimaryBackground: purple;
+
+body{
+    padding-top: 60px;
+}
+
+
+.navbar-inner{
+    @include box-shadow(none !important);
+    border: 0;
+}
+
+.footer{
+    margin-top: 50px;
+    color: $grayLight;
+    a{
+        color: $gray;
+    }
+}
+
+.image {
+  position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+.image h1 { 
+   position: absolute; 
+   bottom: 10px; 
+   left: 0;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.5);
+}
+
+.image span .h1spacer
+{
+width: 10px;
+}
+
+.thumbnail {
+float: left;
+font-size: 0px;
+margin: 0px 5px 2px;
+overflow: hidden;
+width: 15%;
+height: 15%;
+}
+
+
+.clearleft {
+    clear: left;
+    height: 0px;
+}
+
+.list-name a {
+font-size:16pt;
+}

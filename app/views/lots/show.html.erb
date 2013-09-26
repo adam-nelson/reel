@@ -1,0 +1,25 @@
+<div class="row-fluid">
+	<div class="image span9">
+		<%= image_tag @lot.image.url %>
+	</div>
+	<div class="span3">
+		<h3 class="page-header"><%= @lot.name %></h3>
+		<h4 >Current Price: $ <%= @lot.bidprice %></h4>
+		<h4 >Reserve Price: $ <%= @lot.resprice %></h4>
+		<%= simple_form_for(@lot) do |f| %>
+		<%= f.input :bidprice, label: 'Your bid please', placeholder: 'Enter Bid', input_html: { maxlength: 10 } %>
+    		<%= f.submit 'Bid', class: 'btn btn-primary btn-large' %>
+
+		<% end %>
+
+	</div>
+
+
+	<div class="span7">
+		<strong>info:</strong>
+  		<%= @lot.description %>
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_lot_path(@lot) %> |
+<%= link_to 'Back', lots_path %>
